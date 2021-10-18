@@ -44,6 +44,7 @@ test_fruit=np.array([4,-2])
 plt.style.use('classic')
 plt.scatter(X[:,0],X[:,1],c=Y)
 plt.scatter(test_fruit[0],test_fruit[1],color='green',marker='*')
+## scatter plot
 def dist(a1,a2):
     return (np.sum(a1-a2)**2)**.5
 def KNN(X,Y,test_point,k=5):
@@ -60,6 +61,7 @@ def KNN(X,Y,test_point,k=5):
     pred=b[0][idx]
     return int(pred)
 KNN(X,Y,test_fruit)
+## KNN distance measurement
 df=pd.read_csv("mnist_train.csv")
 df.head()
 df.shape
@@ -73,7 +75,7 @@ i=0
 plt.imshow(X[i].reshape(28,28),cmap='gray')
 print(Y[0])
 plt.figure()
-
+# map drawn
 for i in range(10):
     plt.subplot(2,5,i+1)
     plt.imshow(X[i].reshape(28,28),cmap='gray')
